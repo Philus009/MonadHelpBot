@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<!--keep pushing-->
+
+<head>
+    <title>Wingman</title>
+    <meta name="viewport" content="width=device-width" ,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.1/marked.min.js"></script>
+    
+
+</head>
+
+<body>
+
+<h2 style="text-align: center;"> Ask me anything about MONAD</h2>
+   
+    <div class="content1">
+        <center>
+            <input class="searchbar" type="text" placeholder="What is Monad about" name="exampleInput" list="suggestions"
+                onkeypress="handleKeyPress(event)">
+            <datalist id="suggestions">
+                <option value="What is Monad about,"></option>
+                <option value="How can I use Monad as a user?">
+                <option value="How can I use Monad as a Developer?">
+                    <!-- Add more suggestions as needed -->
+            </datalist>
+        </center>
+
+
+
+
+    </div>
+
+    <div class="content0">
+        <div class="shimmer">
+            <div class="wrapper">
+                <div class="stroke animate title"></div>
+                <div class="stroke animate link"></div>
+                <div class="stroke animate description"></div>
+            </div>
+        </div>
+        <div class="shimmer">
+            <div class="wrapper">
+                <div class="stroke animate title"></div>
+                <div class="stroke animate link"></div>
+                <div class="stroke animate description"></div>
+            </div>
+        </div>
+        <div class="shimmer">
+            <div class="wrapper">
+                <div class="stroke animate title"></div>
+                <div class="stroke animate link"></div>
+                <div class="stroke animate description"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content2">
+        <!--This is where the generated course content will be displayed-->
+    </div>
+
+    <div class="content3">
+        <p id="my-paragraph"></p>
+        <div class="quiz-container">
+            <p> attempt all the questions below, use the hint when ever you are having trouble selecting your answer
+            </p>
+            <br>
+            <div id="quiz"></div>
+            <button class="submitKey" id="submit">Reveal Solution</button>
+            <div id="results"></div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <p id="modal-text">This is the modal content.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="base">
+
+        <button class="actionbt">
+            @philus009 on Discord</button>
+    
+        <a href="https://twitter.com/monad_xyz" target="_blank">
+            <button class="actionbt2">Monad</button>
+          </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="splash">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var splashElement = document.querySelector(".splash");
+
+                if (splashElement) {
+                    var opacity = 1; // Initial opacity
+                    var duration = 3000; // Total duration of the fade in milliseconds
+                    var interval = 20; // Time interval for each step (20ms for a smooth effect)
+                    var steps = duration / interval;
+                    var step = (1 - 0) / steps; // Calculate the step size
+
+                    var fadeOut = setInterval(function () {
+                        opacity -= step; // Reduce opacity by the step size
+                        splashElement.style.opacity = opacity;
+
+                        if (opacity <= 0) {
+                            // Opacity has reached 0, so hide the element and clear the interval
+                            splashElement.style.display = "none";
+                            clearInterval(fadeOut);
+                        }
+                    }, interval);
+                }
+            });
+        </script>
+    </div>
+
+    
+</body>
+
+<script src="./main.js"></script>
+<script src="./quiz.js"></script>
+ 
+
+</html>
